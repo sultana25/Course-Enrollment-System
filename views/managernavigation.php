@@ -9,8 +9,8 @@
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION['username'];?></strong>
                              </span> <span class="text-muted text-xs block">Co-ordination<b class="caret"></b></span> </span> </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="coordinator_profile.php">Profile</a></li>
-                        <li><a href="coordinator_contacts.php">Contacts</a></li>
+<!--                        <li><a href="coordinator_profile.php">Profile</a></li>-->
+<!--                        <li><a href="coordinator_contacts.php">Contacts</a></li>-->
                         <li class="divider"></li>
                         <li><a href="superAdminLogOut.php">Logout</a></li>
                     </ul>

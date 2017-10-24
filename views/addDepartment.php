@@ -97,19 +97,19 @@ $alldata=$obj->loadtable();
                     <tr>
                         <td><?php echo $sl?></td>
                         
-                        <td><?php echo $data['name']?></td>
+                        <td><?php echo $data['name']; ?></td>
 
                         <td>
                             <!--    <form method="post" action="controller/deleteadmin.php"> -->
 
-                            <a href="editDepartment.php?id=<?php echo $data['id']?>" class="btn btn-primary" role="button">Edit</a>
-                            <a href="../controller/deleteDepartment.php?id=<?php echo $data['id']?>" class="btn btn-danger" role="button" >Delete</a>
+                            <a href="editDepartment.php?id=<?php echo $data['id'];?>" class="btn btn-primary" role="button">Edit</a>
+                            <a href="../controller/deleteDepartment.php?id=<?php echo $data['id'];?>" class="btn btn-danger" role="button" >Delete</a>
                             <!--    </form> -->
                         </td>
                     </tr>
 
 
-                <? }?>
+                <?php }?>
                 </tbody>
             </table>
 

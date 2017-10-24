@@ -1,9 +1,10 @@
-<?php include_once('header.php');?>
+<!--
+<?php //include_once('header.php');?>
 
-<?php include_once('studentNavigation.php');?>
+<?php //include_once('studentNavigation.php');?>
 
     <div id="page-wrapper" class="gray-bg">
-<?php include_once('logout row.php');?>
+<?php //include_once('logout row.php');?>
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
 
@@ -26,4 +27,4 @@
     </div>
 
 
-<?php include_once('footer.php');?>
+<?php //include_once('footer.php');?>-->

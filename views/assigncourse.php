@@ -160,24 +160,24 @@ if(strtoupper($_SERVER['REQUEST_METHOD']=='GET')) {
                     </tr>
                     </thead>
                     <tbody>
-                    <?php $sl=0;foreach ($alldata as $data) { $sl++?>
+                    <?php $sl=0;foreach ($alldata as $data) { $sl++; ?>
 
 
                         <tr>
-                            <td><? echo /*$data['c_code']*/ $sl?></td>
-                            <td><? echo /*$data['c_code']*/ $data->c_code?></td>
-                            <td><? echo /*$data['c_title']*/$data->c_title?></td>
-                            <td><? echo /*$data['c_title']*/$data->credit?></td>
-                            <td><? echo /*$data['dept']*/$data->dept_id ?></td>
-                            <td><? echo /*$data['dept']*/$data->trimister ?></td>
+                            <td><?php echo /*$data['c_code']*/ $sl?></td>
+                            <td><?php echo /*$data['c_code']*/ $data->c_code ?></td>
+                            <td><?php echo /*$data['c_title']*/$data->c_title ?></td>
+                            <td><?php echo /*$data['c_title']*/$data->credit ?></td>
+                            <td><?php echo /*$data['dept']*/$data->dept_id ?></td>
+                            <td><?php echo /*$data['dept']*/$data->trimister ?></td>
                             <td>
 
-                                <a href="editCourse.php?id=<?php echo $data->id?>" class="btn btn-primary" role="button">Edit</a>
-                                <a href="../controller/deletecourse.php?c_code=<?php echo $data->c_code?>" class="btn btn-danger" role="button">Delete</a>
+                                <a href="editCourse.php?id=<?php echo $data->id ?>" class="btn btn-primary" role="button">Edit</a>
+                                <a href="../controller/deletecourse.php?c_code=<?php echo $data->c_code ?>" class="btn btn-danger" role="button">Delete</a>
                             </td>
                         </tr>
 
-                    <? } ?>
+                    <?php } ?>
 
 
 

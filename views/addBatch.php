@@ -132,9 +132,9 @@ $allbatch=$batch->loadtable();
 
 
                             <tr>
-                                <td><?php echo $sl?></td>
-                                <td><?php echo $all['department']?></td>
-                                <td><?php echo $all['total']?></td>
+                                <td><?php echo $sl;?></td>
+                                <td><?php echo $all['department'];?></td>
+                                <td><?php echo $all['total'];?></td>
 
                              <!--
                                 <td>
@@ -147,7 +147,7 @@ $allbatch=$batch->loadtable();
                             </tr>
 
 
-                        <? }?>
+                        <?php }?>
                         </tbody>
                     </table>
 
@@ -159,7 +159,7 @@ $allbatch=$batch->loadtable();
     </div>
 
 </div>
-<?php include 'message_script.php'?>
+<?php include 'message_script.php';?>
 
 </body>
 

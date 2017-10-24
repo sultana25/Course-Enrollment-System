@@ -22,6 +22,7 @@ $allInfo=$profilepicture->view();
 
 ?>
 
+
 <?php include_once('header.php');?>
 <?php include('studentNavigation.php');?>
 
@@ -72,7 +73,7 @@ $allInfo=$profilepicture->view();
             <div class="wrapper wrapper-content">
                 <div id="message">
 
-                    <?
+                    <?php
                     if(array_key_exists('message',$_SESSION)&&(!empty($_SESSION['message']))){
                         echo Message::message();
                     }
@@ -84,11 +85,11 @@ $allInfo=$profilepicture->view();
     <div class="row">
         <div class="container">
             <ul class="list-group">
-                <li class="list-group-item list-group-item-warning"><img src="../resource/images/<?php echo $allInfo["image"]?>" alt="image" height="100px" width="100px" class="img-responsive">
+                <li class="list-group-item list-group-item-warning"><img src="../resource/images/<?php echo $allInfo["image"];?>" alt="image" height="100px" width="100px" class="img-responsive">
                 </li>
-                <li class="list-group-item list-group-item-info">Name: <?php echo $allInfo["name"]?></li>
-                <li class="list-group-item list-group-item-info">Email: <?php echo $allInfo["email"]?></li>
-                <li class="list-group-item list-group-item-info">Phone Number: <?php echo $allInfo["phnnumber"]?></li>
+                <li class="list-group-item list-group-item-info">Name: <?php echo $allInfo["name"];?></li>
+                <li class="list-group-item list-group-item-info">Email: <?php echo $allInfo["email"];?></li>
+                <li class="list-group-item list-group-item-info">Phone Number: <?php echo $allInfo["phnnumber"];?></li>
 
 
             </ul>

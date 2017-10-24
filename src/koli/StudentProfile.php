@@ -1,4 +1,4 @@
-
+<?php
 namespace App\koli;
 use App\koli\Message;
 use App\koli\Utility;

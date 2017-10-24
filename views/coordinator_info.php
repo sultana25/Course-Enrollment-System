@@ -50,12 +50,12 @@ $Coordinatorinfo=$obj->prepareData($_SESSION)->getCoordinatorName();
 
 
     <div class="container">
-    <h2>Co ordinator Info :</h2>
+<!--    <h2>Co ordinator Info :</h2>-->
 <ul class="list-group">
-    <li class="list-group-item list-group-item-success">Name :  <?php echo $Coordinatorinfo["co_name"]?></li>
+    <li class="list-group-item list-group-item-success">Name :  <?php //echo $Coordinatorinfo["co_name"];?></li>
 <!--<li class="list-group-item list-group-item-info">Assign For  :  <?php //echo $Coordinatorinfo['']?></li>
 <li class="list-group-item list-group-item-warning"><?//php echo "Univarsity Name:"?></li>-->
-<li class="list-group-item list-group-item-danger"><?php echo "Lecturer of ".$Coordinatorinfo['dept_name']?></li>
+<li class="list-group-item list-group-item-danger"><?php //echo "Lecturer of ".$Coordinatorinfo['dept_name'];?></li>
 </ul>
 
 

@@ -119,7 +119,7 @@ $alldata=$obj->loadtable();
                $sl=0;
                foreach ($alldata as $data){
 
-                   $sl++?>
+                   $sl++; ?>
 
 
                     <tr>
@@ -139,7 +139,7 @@ $alldata=$obj->loadtable();
                     </tr>
 
 
-                <? }?>
+                <?php }?>
                 </tbody>
                     </table>
              

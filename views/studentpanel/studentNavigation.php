@@ -20,9 +20,11 @@
                     IN+
                 </div>
             </li>
+<!--
             <li>
                 <a href="coordinator_info.php"><i class="fa fa-diamond"></i> <span class="nav-label">Co-ordinator Info</span></a>
             </li>
+-->
             <li>
                 <a href="view_courses_trimester.php"><i class="fa fa-files-o"></i> <span class="nav-label">View Course Semister Wise</span></a>
 

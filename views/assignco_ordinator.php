@@ -93,8 +93,8 @@ $next=$pageNo+1;
 
 ?>
 
-<?php include_once('header.php');?>
-    <?php include 'adminnavigation.php';?>
+<?php include_once('header.php')?>
+    <?php include 'adminnavigation.php'?>
 
     <div id="page-wrapper" class="gray-bg dashbard-1">
         <div class="wrapper wrapper-content animated fadeInRight">
@@ -119,7 +119,7 @@ $next=$pageNo+1;
                                                     <div class="form-group"><label>Co-Ordinator Id</label> <input type="text"  name="id" placeholder="Enter Co-Ordinator Id" class="form-control" ></div>
                                                     <div class="form-group"><label>Co-Ordinator Name</label> <input type="text"  name="name" placeholder="Co-Ordinator Name" class="form-control"></div>
                                                     <div class="form-group"><label>Set Password</label> <input type="password"  name="password" placeholder="Enter password" class="form-control"></div>
-                                                    <input type="hidden" name="dept_id" value="<?php echo $singlerowFordeptid['dept_id'] ?>">
+                                                    <input type="hidden" name="dept_id" value="<?php echo $singlerowFordeptid['dept_id']; ?>">
                                                         <!--<select class="form-control" name="dept">
 
                                                             <?php /*foreach ($dept as $depta){*/?>
@@ -132,7 +132,7 @@ $next=$pageNo+1;
                                                         <select class="form-control" name="batch">
 
                                                             <?php foreach ($batchBydept as $batchBydept){?>
-                                                            <option value="<?php echo $batchBydept['number']?>"><?php echo $batchBydept['number']?></option>
+                                                            <option value="<?php echo $batchBydept['number'];?>"><?php echo $batchBydept['number'];?></option>
 
                                                             <?php }?>
                                                         </select> </div>
@@ -156,7 +156,7 @@ $next=$pageNo+1;
             <div class="row">
                 <div id="message">
 
-                    <?
+                    <?php
                     if(array_key_exists('message',$_SESSION)&&(!empty($_SESSION['message']))){
                         echo Message::message();
                     }
@@ -167,14 +167,14 @@ $next=$pageNo+1;
                     <div class="form-group ">
                         <!--<label for="sel1">Select list (select one):</label>-->
                         <select class="form-control" id="sel1" name="itemPerPage">
-                            <option <?php  if($itemPerPage==5){echo "selected";}else{"";}?>>5</option>
-                            <option <?php  if($itemPerPage==10){echo "selected";}else{"";}?>>10</option>
-                            <option <?php  if($itemPerPage==15){echo "selected";}else{"";}?>>15</option>
-                            <option <?php  if($itemPerPage==20){echo "selected";}else{"";}?>>20</option>
-                            <option <?php  if($itemPerPage==25){echo "selected";}else{"";}?>>25</option>
+                            <option <?php  if($itemPerPage==5){echo "selected";}else{"";} ?>>5</option>
+                            <option <?php  if($itemPerPage==10){echo "selected";}else{"";} ?>>10</option>
+                            <option <?php  if($itemPerPage==15){echo "selected";}else{"";} ?>>15</option>
+                            <option <?php  if($itemPerPage==20){echo "selected";}else{"";} ?>>20</option>
+                            <option <?php  if($itemPerPage==25){echo "selected";}else{"";} ?>>25</option>
                         </select>
                         <button type="submit">Go!</button>
-
+                    </div>
                 </form>
               
 
@@ -186,32 +186,33 @@ $next=$pageNo+1;
                         <th>Name</th>
                         <th>Department</th>
                         <th>Batch</th>
-                      <!--  <th>Action</th> ->
+                      <!--  <th>Action</th> -->
                     </tr>
                     </thead>
                     <tbody>
                     <?php $sl=0;
                     if(isset($codata)){
-                        foreach($codata as $da){$sl++;
+                        foreach($codata as $da){
+                            $sl++;
 
 
-                        //\App\tusar\Utility::dd($codata->id);
-                        ?>
+                        //\App\koli\Utility::dd($codata->id);
+                    ?>
 
 
                         <tr>
-                            <td><?php echo $sl?></td>
-                            <td><?php echo $da->co_id?></td>
-                            <td><?php echo $da->name?></td>
-                            <td><?php echo $da->dept_id?></td>
-                            <td><?php echo $da->number?></td>
+                            <td><?php echo $sl;?></td>
+                            <td><?php echo $da->co_id;?></td>
+                            <td><?php echo $da->name;?></td>
+                            <td><?php echo $da->dept_id;?></td>
+                            <td><?php echo $da->number;?></td>
 
                            <!--
 
                             <td>
 
-                                <a href="../controller/editadmin.php?adminid=<?php echo $da->id?>" class="btn btn-primary" role="button">Edit</a>
-                                <a href="../controller/delete_Coordinator.php?id=<?php echo $da->id?>" class="btn btn-danger" role="button" >Delete</a>
+                                <a href="../controller/editadmin.php?adminid=<?php //echo $da->id;?>" class="btn btn-primary" role="button">Edit</a>
+                                <a href="../controller/delete_Coordinator.php?id=<?php //echo $da->id;?>" class="btn btn-danger" role="button" >Delete</a>
 
                             </td>
 
@@ -219,12 +220,12 @@ $next=$pageNo+1;
                         </tr>
 
 
-                    <? }}?>
+                    <?php }}?>
                     </tbody>
                 </table>
                 <ul class="pagination">
                     <?php if(($pageNo>1)){echo "<li><a href='assignco_ordinator.php?pageNumber=$prev'>Prev</a></li>";}else{"";}?>
-                    <?php echo $pagination?>
+                    <?php echo $pagination;?>
                     <?php if(($pageNo<$noOfPage)){echo "<li><a href='assignco_ordinator.php?pageNumber=$next'>Next</a></li>";}else{"";}?>
                 </ul>
 
@@ -233,4 +234,4 @@ $next=$pageNo+1;
 
             </div>
 
-    <?php include_once('footer.php');?>
+    <?php include_once('footer.php'); ?>

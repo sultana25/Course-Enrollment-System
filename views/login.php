@@ -64,11 +64,13 @@ use App\koli\Message;
                          <select class="form-control" id="select" name="rank">
                              <option value="select">select</option>
                              <!--<option value="Accounts">Accounts</option>-->
-
+                            <option value="Super Admin">Super Admin</option>
+                             <option value="Admin">Admin</option>
+                             <option value="co-ordinator">co-ordinator</option>
                              <option value="student">student</option>
-                              <option value="co-ordinator">co-ordinator</option>
-                              <option value="Admin">Admin</option>
-                              <option value="Super Admin">Super Admin</option>
+                              
+                              
+                              
                             </select> 
                               <input type="text" name="uname" class="form-control" placeholder="UserId" required=""> 
                            <!--  <input type="text" id="user_name" class="form-control" placeholder="Username" required=""> -->
