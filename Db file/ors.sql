@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2016 at 08:51 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.5.37
+-- Generation Time: Oct 24, 2017 at 11:08 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -111,7 +111,8 @@ INSERT INTO `admin` (`id`, `name`, `dept_id`, `password`, `status`, `admin_id`) 
 (10, 'MSB', 7, '123', 0, 'TEXT00123'),
 (11, 'yasin kabir', 5, '123', 0, 'YASIN1'),
 (12, 'hasnat riaz', 4, '123', 0, 'HASNAT'),
-(13, 'nahida akter', 8, '123', 0, 'NAHIDA2');
+(13, 'nahida akter', 8, '123', 0, 'NAHIDA2'),
+(14, 'hasan zamil', 5, '123', 0, 'ZAMIL');
 
 -- --------------------------------------------------------
 
@@ -212,6 +213,7 @@ CREATE TABLE `batch` (
 --
 
 INSERT INTO `batch` (`id`, `dept_id`, `number`) VALUES
+(0, 8, 1),
 (1, 1, 1),
 (2, 2, 1),
 (3, 3, 1),
@@ -258,9 +260,6 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`id`, `c_code`, `c_title`, `credit`, `dept_id`, `status`, `trimister`, `per`) VALUES
-(2, 'CSE 112', 'COMPUTER FUNDAMENTAL AND PROGRAMMING TECH.SESSIONAL', '1.5', 5, NULL, 1, 1200),
-(3, 'ENG 100', 'ENGLISH FUNDAMENTAL', '3', 5, NULL, 1, 1200),
-(5, 'CSE 113', 'ELECTRICAL ENGINEERING', '3', 5, NULL, 2, 1200),
 (6, 'CSE 121', 'STRUCTURED PROGRAMMING LANGUAGE ', '3', 5, NULL, 2, 1200),
 (7, 'CSE 122', 'STRUCTURED PROGRAMMING LANGUAGE SESSIONAL', '1.5', 5, NULL, 2, 1200),
 (8, 'CSE 123', 'ELECTRONICS', '3', 5, NULL, 2, 1200),
@@ -270,10 +269,8 @@ INSERT INTO `course` (`id`, `c_code`, `c_title`, `credit`, `dept_id`, `status`, 
 (12, 'CSE 218', 'DATA STRUCTURE SESSIONAL', '1.5', 5, NULL, 3, 1200),
 (13, 'CSE 135', 'DISCREATE MATHMATICS', '3', 5, NULL, 3, 1200),
 (14, 'CSE 213', 'DLD', '3', 5, NULL, 4, 1200),
-(15, 'CSE 214', 'DLD SESSIONAL', '1.5', 5, NULL, 4, 1200),
 (16, 'STAT 235', 'STATISTICS', '3', 5, NULL, 4, 1200),
 (17, 'CSE 227', 'ALGORITHM', '3', 5, NULL, 5, 1200),
-(18, 'CSE 228', 'ALGORITHM SESSIONAL', '1.5', 5, NULL, 5, 1200),
 (19, 'CSE 233', 'COMPUTER ORGANIZATION & ARCHITECHTURE ', '3', 5, NULL, 5, 1200),
 (20, 'CSE 234', 'COMPUTER ORGANIZATION & ARCHITECHTURE SESSIONAL', '1.5', 5, NULL, 5, 1200),
 (21, 'CSE 231', 'OPERATING SYSTEM CONCEPTS', '3', 5, NULL, 6, 1200),
@@ -302,7 +299,8 @@ INSERT INTO `course` (`id`, `c_code`, `c_title`, `credit`, `dept_id`, `status`, 
 (44, 'CSE987', 'tset', '3', 6, NULL, 1, 1200),
 (46, 'CSTE10', 'Java', '3.00', 5, NULL, 2, 1200),
 (47, 'CSTE988', 'C++', '3.00', 5, NULL, 1, 1200),
-(48, 'GHG', 'ghgjg', '3.00', 6, NULL, 1, 1200);
+(48, 'GHG', 'ghgjg', '3.00', 6, NULL, 1, 1200),
+(49, 'CSTE123', 'Java', '3', 5, NULL, 2, 1200);
 
 -- --------------------------------------------------------
 
@@ -336,7 +334,10 @@ INSERT INTO `co_odinator` (`id`, `co_id`, `name`, `password`, `dept_id`, `batch_
 (12, 'MSD', 'sowmitra das', '123', 5, NULL, 4),
 (13, 'NKN', 'Nayan Kumar Nath', '123', 5, NULL, 1),
 (14, 'javed1', 'javed hossain', '123', 6, NULL, 2),
-(15, 'javed1', 'javed hossain', '123', 4, NULL, 5);
+(15, 'javed1', 'javed hossain', '123', 4, NULL, 5),
+(16, 'nahida1', 'nahida akter', '123', 4, NULL, 2),
+(17, 'hjh', 'dsajh', '123', 4, NULL, 2),
+(18, 'nahida', 'nahida akter', 'Ss818677974', 4, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -355,9 +356,10 @@ CREATE TABLE `department` (
 --
 
 INSERT INTO `department` (`id`, `name`, `status`) VALUES
-(4, 'FIMS', 0),
 (5, 'CSE', 0),
-(8, 'ICT', 0);
+(8, 'ICT', 0),
+(9, 'EEE', 0),
+(10, 'FIMS', 0);
 
 -- --------------------------------------------------------
 
@@ -482,7 +484,10 @@ INSERT INTO `registered_course_details` (`master_id`, `course_id`, `status`) VAL
 (3, 3, 1),
 (4, 1, 1),
 (4, 2, 1),
-(4, 3, 1);
+(4, 3, 1),
+(5, 14, 0),
+(5, 15, 0),
+(5, 16, 0);
 
 -- --------------------------------------------------------
 
@@ -507,7 +512,8 @@ INSERT INTO `registered_course_master` (`id`, `std_id`, `trimster`, `total_credi
 (1, '1', 1, 7.5, 1, 6),
 (2, '2', 1, 7.5, 1, 6),
 (3, '3', 1, 7.5, 1, 7),
-(4, '4', 1, 7.5, 1, 7);
+(4, '4', 1, 7.5, 1, 7),
+(5, 'koli', 4, 0, 0, 6);
 
 -- --------------------------------------------------------
 
@@ -821,32 +827,27 @@ ALTER TABLE `addmission`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `admindetails`
 --
 ALTER TABLE `admindetails`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `batch`
---
-ALTER TABLE `batch`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
---
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `co_odinator`
 --
 ALTER TABLE `co_odinator`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `enroll_master`
 --
@@ -861,7 +862,7 @@ ALTER TABLE `offer_course`
 -- AUTO_INCREMENT for table `registered_course_master`
 --
 ALTER TABLE `registered_course_master`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `request`
 --
